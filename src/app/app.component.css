@@ -1,0 +1,23 @@
+h1{
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+
+h2{
+  padding: 1rem;
+}
+
+.custom-width-btn {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h3{
+  margin-left: 40%;
+  margin-top: 80px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+}

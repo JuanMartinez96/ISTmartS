@@ -1,0 +1,27 @@
+form {
+  margin-left: 20px;
+}
+
+label{
+  color: blue;
+}
+
+.text-center #buscar {
+  width: 150px;
+}
+
+
+.custom-width-btn {
+  margin-top: 50px;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.btn-pdf {
+  margin-right: 50px; /* Puedes ajustar este valor según tu preferencia */
+}
+
+.btn-excel {
+  margin-left: 50px; /* Puedes ajustar este valor según tu preferencia */
+}

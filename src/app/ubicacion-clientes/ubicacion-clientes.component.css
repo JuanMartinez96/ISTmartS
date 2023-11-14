@@ -1,0 +1,12 @@
+form {
+  margin-right: 15px;
+  background-color: #6c757d;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 320px;
+}
+
+label[for="coordenadas"] {
+  color: blue; 
+}
