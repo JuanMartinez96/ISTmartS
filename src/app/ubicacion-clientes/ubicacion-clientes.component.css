@@ -7,6 +7,6 @@ form {
   height: 320px;
 }
 
-label[for="coordenadas"] {
-  color: blue; 
+p {
+  color: blue;
 }

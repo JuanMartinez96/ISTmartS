@@ -13,8 +13,8 @@ path: 'tablaClientes',
 component: TablaClientesComponent,
 },
 {
-  path: '**',
-  redirectTo: 'clientes'
+  path: '',
+  redirectTo: 'clientes', pathMatch: 'full'
 }
 ];
 

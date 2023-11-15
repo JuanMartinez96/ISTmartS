@@ -1,0 +1,22 @@
+/* confirm-dialog.component.css */
+.custom-dialog-title {
+  color: #008000; /* Cambia el color del título a verde */
+}
+
+.custom-dialog-content {
+  background-color: #f0f8ff; /* Cambia el color de fondo del contenido a un tono claro */
+}
+
+.custom-dialog-actions {
+  justify-content: space-between; /* Coloca los botones en ambos extremos */
+}
+
+.custom-confirm-button {
+  background-color: #008000; /* Cambia el color de fondo del botón de confirmar a verde */
+  color: #fff; /* Cambia el color del texto del botón a blanco */
+}
+
+.custom-cancel-button {
+  background-color: #ff0000; /* Cambia el color de fondo del botón de cancelar a rojo */
+  color: #fff; /* Cambia el color del texto del botón a blanco */
+}

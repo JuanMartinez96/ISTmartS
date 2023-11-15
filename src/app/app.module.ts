@@ -8,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UbicacionClientesComponent } from './ubicacion-clientes/ubicacion-clientes.component';
 import { TablaClientesComponent } from './tabla-clientes/tabla-clientes.component';
 import { ButtonModule } from 'primeng/button';
-import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 
@@ -22,15 +24,16 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     ClientesComponent,
     UbicacionClientesComponent,
     TablaClientesComponent,
-    AlertDialogComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ButtonModule
-
+    ButtonModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

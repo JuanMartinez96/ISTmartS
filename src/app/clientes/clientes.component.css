@@ -16,6 +16,7 @@ label{
   width: 80%;
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 8px;
 }
 
 .btn-pdf {
@@ -25,3 +26,56 @@ label{
 .btn-excel {
   margin-left: 50px; /* Puedes ajustar este valor según tu preferencia */
 }
+
+h1{
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+
+
+h1{
+  text-align: center;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+}
+
+h2{
+  padding: 1rem;
+}
+
+.custom-width-btn {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+h3{
+  margin-left: 40%;
+  margin-top: 60px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="search"] {
+  padding-right: 30px; /* Ajusta este valor según sea necesario para dar espacio al ícono */
+}
+
+.search-container i {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajusta este valor según sea necesario para la posición del ícono */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+

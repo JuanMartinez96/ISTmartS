@@ -17,7 +17,13 @@
 
           </div>
           <div>
-            <p-button label="Nuevo Registro" icon="pi pi-pencil" iconPos="left"></p-button>
+            <p-button
+            label="Nuevo Registro"
+            icon="pi pi-pencil"
+            iconPos="left"
+            (click)="abrirDialogoConfirmacion()"
+            >
+          </p-button>
 
           </div>
           <div class="row">
@@ -25,10 +31,18 @@
               <h2>Informacion de los clientes</h2>
             </div>
             <div class="col-md-6">
-              <button type="button" class="btn btn-danger">
+              <button
+              type="button"
+              class="btn btn-danger"
+              (click)="abrirDialogoConfirmacion()"
+              >
                 <i class="fas fa-file-pdf"></i> Exportar a PDF
               </button>
-              <button type="button" class="btn btn-success mx-1">
+              <button
+              type="button"
+              class="btn btn-success mx-1"
+              (click)="abrirDialogoConfirmacion()"
+              >
                 <i class="fas fa-file-excel"></i> Exportar a Excel
               </button>
             </div>
@@ -59,7 +73,6 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Aquí puedes agregar tus filas con datos -->
               <tr>
                 <td>Cliente 1</td>
                 <td>Nombre 1</td>
@@ -69,9 +82,18 @@
                 <td>Municipio 1</td>
                 <td>Codigo Postal 1</td>
                 <td>
-                  <i class="fas fa-search" ></i>
-                  <i class="fas fa-edit"></i>
-                  <i class="fas fa-trash"></i>
+                  <i
+                  class="fas fa-search"
+                  (click)="abrirDialogoConfirmacion()"
+                  ></i>
+                  <i
+                  class="fas fa-edit"
+                  (click)="abrirDialogoConfirmacion()"
+                  ></i>
+                  <i
+                  class="fas fa-trash"
+                  (click)="abrirDialogoConfirmacion()"
+                  ></i>
                 </td>
               </tr>
             </tbody>
