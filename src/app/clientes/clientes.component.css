@@ -79,3 +79,12 @@ h3{
 }
 
 
+input[readonly] {
+  background-color: #f0f0f0; /* Un tono de gris */
+  /* Otros estilos adicionales según sea necesario */
+}
+
+input::placeholder {
+  text-align: center;
+}
+

@@ -21,11 +21,13 @@
             label="Nuevo Registro"
             icon="pi pi-pencil"
             iconPos="left"
-            (click)="abrirDialogoConfirmacion()"
+            (click)="abrirDialogoInsertar()"
             >
           </p-button>
 
           </div>
+
+          <br>
           <div class="row">
             <div class="col-md-6">
               <h2>Informacion de los clientes</h2>
@@ -34,17 +36,18 @@
               <button
               type="button"
               class="btn btn-danger"
-              (click)="abrirDialogoConfirmacion()"
+
               >
                 <i class="fas fa-file-pdf"></i> Exportar a PDF
               </button>
               <button
               type="button"
               class="btn btn-success mx-1"
-              (click)="abrirDialogoConfirmacion()"
-              >
-                <i class="fas fa-file-excel"></i> Exportar a Excel
-              </button>
+              (click)="abrirDialogoConfirmacionExcel()"
+               >
+              <i class="fas fa-file-excel"></i> Exportar a Excel
+            </button>
+
             </div>
 
           </div>
@@ -59,9 +62,10 @@
       <div class="row">
 
         <div class="col-md-12">
-          <table class="table">
+
+           <table class="table" id="tabla-clientes">
             <thead>
-              <tr>
+              <tr >
                 <th>Cliente</th>
                 <th>Nombre/Apellido</th>
                 <th>Telefono</th>
@@ -73,27 +77,18 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Cliente 1</td>
-                <td>Nombre 1</td>
-                <td>Telefono 1</td>
-                <td>Correo 1</td>
-                <td>Estado 1</td>
-                <td>Municipio 1</td>
-                <td>Codigo Postal 1</td>
+              <tr *ngFor="let cliente of clientes?.clientes">
+                <td>{{cliente.id_cliente}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.telefono}}</td>
+                <td>{{cliente.email}}</td>
+                <td>{{cliente.estado}}</td>
+                <td>{{cliente.municipio}}</td>
+                <td>{{cliente.cp }}</td>
                 <td>
-                  <i
-                  class="fas fa-search"
-                  (click)="abrirDialogoConfirmacion()"
-                  ></i>
-                  <i
-                  class="fas fa-edit"
-                  (click)="abrirDialogoConfirmacion()"
-                  ></i>
-                  <i
-                  class="fas fa-trash"
-                  (click)="abrirDialogoConfirmacion()"
-                  ></i>
+                  <p-button icon="pi pi-search" (click)="abrirDialogoConfirmacion()"></p-button>
+                  <p-button icon="pi pi-pencil" (onClick)="abrirDialogoEditar(cliente.id_cliente ?? 0)"></p-button>
+                  <p-button icon="pi pi-trash" (click)="abrirDialogoEliminar(cliente.id_cliente ?? 0)"></p-button>
                 </td>
               </tr>
             </tbody>
@@ -105,12 +100,17 @@
     <div class="col-md-5">
       <div class="d-flex flex-column align-items-center">
         <h2>Ubicacion del cliente</h2>
-        <div style="width: 100%; height: 300px; border: 1px solid #ccc;">
+        <div>
+          <div id="map"></div>
         </div>
-        <button type="button" class="btn btn-primary mt-3" style="width: 100%;">
+        <button id="botonFeo" type="button" class="btn btn-primary mt-3">
           Expandir mapa
         </button>
       </div>
     </div>
   </div>
+
 </div>
+
+
+

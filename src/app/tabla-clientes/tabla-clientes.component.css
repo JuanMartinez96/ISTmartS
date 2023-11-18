@@ -1,3 +1,32 @@
 i{
   margin-right: 5px;
 }
+
+#map{
+  width: 35vw;
+  height: 40vw;
+  background-color: red;
+  margin-left: 150px;
+}
+
+#botonFeo{
+  width: 90%;
+  margin-left: 150px;
+}
+
+
+.lista-clientes li {
+  color: black;
+}
+
+/* styles-custom.css */
+
+/* Estilo personalizado para botones redondeados */
+.p-button-rounded {
+  border-radius: 20px !important;
+}
+
+/* Margen a la derecha para separar los botones */
+.p-mr-2 {
+  margin-right: 8px !important;
+}

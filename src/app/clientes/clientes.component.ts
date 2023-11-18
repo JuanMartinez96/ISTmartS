@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { ClientesService } from '../services/clientes.service';
+import { Clientes } from '../interface/clientes.interface';
 
 @Component({
   selector: 'app-clientes',
@@ -9,6 +11,7 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit{
+
 
   public myForm: FormGroup = this.fb.group({
     idCliente: [' ', [Validators.required, Validators.min(1)]],
@@ -28,11 +31,15 @@ export class ClientesComponent implements OnInit{
 
   constructor(
     private fb: FormBuilder,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private clientesService: ClientesService,
     ){}
 
-  ngOnInit(): void {
+    public clientes: Clientes | undefined;
 
+  ngOnInit(): void {
+    this.clientesService.getClientes()
+    .subscribe( clientes => this.clientes = clientes );
   }
 
   onSave():void {
@@ -68,6 +75,8 @@ export class ClientesComponent implements OnInit{
 
         return;
       }
+
+
 
     });
   }

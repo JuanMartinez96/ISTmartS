@@ -11,6 +11,14 @@ import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { InsertarClienteComponent } from './insertar-cliente/insertar-cliente.component';
+
 
 
 
@@ -25,6 +33,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     UbicacionClientesComponent,
     TablaClientesComponent,
     ConfirmDialogComponent,
+    EditarClienteComponent,
+    InsertarClienteComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +43,12 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     AppRoutingModule,
     ButtonModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule,
+    MatDividerModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
